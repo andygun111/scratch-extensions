@@ -1,0 +1,25 @@
+(scratch-vm Extension Extension:
+  extension-id: "com.example.square"
+  extension-name: "Square"
+  extension-version: 1.0
+  blocks:
+    - block:
+        opcode: "drawSquare"
+        inputs:
+          - input:
+              name: "SIZE"
+              type: "number"
+        fields: []
+        mutation: {}
+        shadow: false
+        type: "command"
+  generators:
+    drawSquare:
+      type: "draw_rectangle"
+      inputs:
+        SIZE: {type: "number", value: 100}
+      fields:
+        FILL_COLOR: {type: "color", value: "#000000"}
+        STROKE_COLOR: {type: "color", value: "#000000"}
+      shadow: false
+  )
