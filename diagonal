@@ -1,0 +1,23 @@
+(scratch-vm Extension Extension:
+  extension-id: "com.example.diagonal"
+  extension-name: "Diagonal"
+  extension-version: 1.0
+  blocks:
+    - block:
+        opcode: "moveDiagonally"
+        inputs:
+          - input:
+              name: "DISTANCE"
+              type: "number"
+        fields: []
+        mutation: {}
+        shadow: false
+        type: "command"
+  generators:
+    moveDiagonally:
+      type: "move_xy"
+      inputs:
+        DISTANCE: {type: "number", value: 100}
+      fields: []
+      shadow: false
+  )
